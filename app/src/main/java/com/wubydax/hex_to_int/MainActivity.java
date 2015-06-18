@@ -6,23 +6,12 @@ import android.content.ClipboardManager;
 import android.graphics.Color;
 import android.graphics.Outline;
 import android.os.Bundle;
-import android.preference.EditTextPreference;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.UnsupportedEncodingException;
-import java.math.BigInteger;
-import java.nio.charset.Charset;
-import java.nio.charset.CharsetDecoder;
-import java.nio.charset.CharsetEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 
 public class MainActivity extends Activity implements View.OnLongClickListener{
