@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingEnd="16dp"
+
+    android:paddingStart="16dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainHexToIntContainer"
+        android:layout_marginBottom="48dp"
+        >
+
+        <TextView
+            android:id="@+id/hexToIdTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="HEX string to color integer"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="24dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/hexToIntContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/hexToIdTitle"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/hex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="@string/allowedChars"
+                android:gravity="center"
+                android:hint="Input HEX value"
+                android:inputType="textVisiblePassword" />
+
+
+
+            <TextView
+                android:id="@+id/integer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Color Int"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textIsSelectable="true"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/chosenColor"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/hexToIntContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp" />
+
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chosenColor"
+            android:layout_centerHorizontal="true"
+            android:onClick="convertColor"
+            android:text="hex-to-int" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainHexToReverseContainer"
+        android:layout_below="@id/mainHexToIntContainer">
+
+        <TextView
+            android:id="@+id/hexToReverseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Reverse HEX string for smali"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="24dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/hexToReverseContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/hexToReverseTitle"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/hex2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="@string/allowedChars"
+                android:gravity="center"
+                android:hint="Input HEX value"
+                android:inputType="textVisiblePassword" />
+
+
+            <TextView
+                android:id="@+id/reverseHex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Smali Hex"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textIsSelectable="true"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/chosenColor2"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/hexToReverseContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            />
+
+        <Button
+            android:id="@+id/convert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chosenColor2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:onClick="reverseColor"
+            android:text="reverse hex" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

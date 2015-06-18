@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hex Converter</string>
+
+    <string name="allowedChars">abcdefABCDEF0123456789</string>
+    <string name="action_settings">Settings</string>
+    <string name="illegal_hex_value_toast">Illegal hex value. Please enter value of 3, 4, 6 or 8 legal hex characters</string>
+    <string name="copied_to_clipboard">" has been copied to clipboard"</string>
+</resources>
